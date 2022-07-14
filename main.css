@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 700px;
+  height: 90px;
+  position: relative;
+}
+.result-text {
+  position: absolute;
+  top: -10px;
+  left: 80px;
+  background-color: white;
+}
+
+.lotto-div {
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#draw-btn {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #2acdea;
+  color: white;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#draw-btn:hover {
+  animation-name: swing;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+#draw-btn:active {
+  box-shadow: 1px 2px 0 rgb(0, 0, 0, 0.5);
+  transform: scale(0.7);
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
