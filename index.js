@@ -35,7 +35,6 @@ const paintLotto = (num) => {
 //   }
 //   const index = Math.floor(Math.random() * numberArr.length);
 //   const lottoNumber = numberArr[index];
-//   numberArr.splice(index, 1);
 //   lottoNumberArr.push(lottoNumber);
 //   paintLotto(lottoNumber);
 //   //버튼을 누를때마다 랜덤으로 번호를 하나씩 어레이에 저장함
@@ -49,7 +48,12 @@ const getNumber = () => {
   }
   const index = Math.floor(Math.random() * numberArr.length);
   const lottoNumber = numberArr[index];
-  numberArr.splice(index, 1);
+  const removeNumberArr = numberArr.filter((num) => {
+    return num !== lottoNumber;
+  });
+  numberArr = removeNumberArr;
+  console.log(lottoNumberArr);
+  // numberArr.splice(index, 1);
   lottoNumberArr.push(lottoNumber);
   paintLotto(lottoNumber);
 };
